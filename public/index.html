@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <script src="./index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Check-In</title>
+     <link rel="stylesheet" href="./style.css" type="text/css">
 </head>
-
 <body>
-    <div>
-        <input id="email" placeholder="email">
-    </div>
-    <div>
-        <input id="first-name" placeholder="first name">
-    </div>
+<div class="container">
+
 
     <div>
-        <input id="last-name" placeholder="last name">
+        <h1>Check-In</h1>
+        <p>Welcome to the Meet-Up!</p>
     </div>
+    <input id='first-name' type='text' placeholder="First Name">
+    <input id='last-name' type='text' placeholder='Last Name'>
+    <input id='email' type='text' placeholder='Email'>
+    <input id='phone-number' type='number' placeholder='SMS Number'>
     <div>
-            <input id="phone-number" placeholder="phone number">
+        <p id='disclaimer'>* By submitting your number, you agree to receive text messages from SDJS and that rates may apply.</p>
     </div>
-    
+    <button>Submit</button>
+    </div>
+<script src="main.js"></script>
 
 </body>
-
 </html>

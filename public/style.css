@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+.container{
+    width: 450px;
+    margin: 20px auto 0 auto;
+    border: solid black 2px;
+    padding:10px;
+}
+
+input {
+    border: solid black 1px;
+    padding: 2px;
+    margin: 3px 0;
+}
+
+p {
+    font-size: 10pt;
+}
+
+#disclaimer{
+    font-size: 6pt;
+}
+
+button{
+    border: solid black 1px;
+    border-radius: 3px;
+    padding: 5px;
+    background: rgb(101, 142, 255);
+}
+
+@media (max-width: 420px) {
+    .container {
+        width: 250px; 
+        text-align: center;
+        font-size: 90%;
+
+    }
+    
+}
