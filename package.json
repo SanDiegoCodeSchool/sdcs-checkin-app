@@ -1,0 +1,25 @@
+{
+  "name": "sdcs-checkin-app",
+  "version": "0.1.0",
+  "description": "This app will allow you to checkin to various in person events.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanDiegoCodeSchool/sdcs-checkin-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SanDiegoCodeSchool/sdcs-checkin-app/issues"
+  },
+  "homepage": "https://github.com/SanDiegoCodeSchool/sdcs-checkin-app#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  }
+}
