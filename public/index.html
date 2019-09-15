@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Check-In</title>
-     <link rel="stylesheet" href="./style.css" type="text/css">
-</head>
-<body>
-<div class="container">
-    <div>
-        <h1>Check-In</h1>
-        <p>Welcome to the Meet-Up!</p>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1>Welcome to the Meetup!</h1>
+        <p class="banner">Please Sign In</p>
+      </div>
+
+      <div class="field">
+        <label for="first-name">First Name</label>
+        <input id="first-name" type="text" />
+      </div>
+
+      <div class="field">
+      <label for="last-name">Last Name</label>
+      <input id="last-name" type="text" />
     </div>
-    <input id='first-name' type='text' placeholder="First Name">
-    <input id='last-name' type='text' placeholder='Last Name'>
-    <input id='email' type='text' placeholder='Email'>
-    <input id='phone-number' type='number' placeholder='SMS Number'>
-    <div>
-        <p id='disclaimer'>* By submitting your number, you agree to receive text messages from SDJS and that rates may apply.</p>
+
+    <div class="field"> 
+      <label for="email">Email</label>
+      <input id="email" type="text" />
     </div>
-    <button type="submit" onclick="handleCheckin(event)">Submit</button>
+
+
+    <div class="field">
+      <label for="phone-number">Phone Number</label>
+      <input id="phone-number" type="number" placeholder="(optional)" />
     </div>
-<script src="main.js"></script>
-</body>
+      <div>
+        <p id="disclaimer">
+          * By submitting your number, you agree to receive text messages from
+          SDJS and that rates may apply.
+        </p>
+      </div>
+      <button type="submit" onclick="handleCheckin(event)">Submit</button>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
