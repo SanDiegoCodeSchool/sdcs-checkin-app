@@ -10,6 +10,10 @@ app.use(bodyParser.json());
 app.use(morgan("dev"));
 app.use(express.static('public'));
 
+app.get("/attendees", (req, res) => {
+  res.status(200).send(checkedIn);
+})
+
 app.post("/jscheckin", (req, res) => {
   const attendee = {
     email: req.body.email,
@@ -19,7 +23,6 @@ app.post("/jscheckin", (req, res) => {
     location: "",
   }
   checkedIn.push(attendee);
-  console.log(checkedIn);
   res.status(200).send(req.body);
 });
 
