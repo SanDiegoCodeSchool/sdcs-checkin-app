@@ -9,18 +9,40 @@
 </head>
 <body>
 <div class="container">
+    <form onSubmit="handleCheckin(event)">
     <div>
         <h1>Check-In</h1>
-        <p>Welcome to the Meet-Up!</p>
+        <h3>Welcome to the Meet-Up!</h3>
     </div>
-    <input id='first-name' type='text' placeholder="First Name">
-    <input id='last-name' type='text' placeholder='Last Name'>
-    <input id='email' type='text' placeholder='Email'>
-    <input id='phone-number' type='number' placeholder='SMS Number'>
+    <div>
+        <label>First Name</label>
+        <br>
+        <input id='first-name' type='text' required>
+    </div>
+    <div>
+        <label>Last Name</label>
+        <br>
+        <input id='last-name' type='text' required>
+    </div>
+    <div>
+    <label>Email</label>
+    <br>
+    <input id='email' type='email' required>
+    </div>
+    <div>
+    <label>Phone Number (optional)</label>
+    <br>
+    <input id='phone-number' type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+    </div>
     <div>
         <p id='disclaimer'>* By submitting your number, you agree to receive text messages from SDJS and that rates may apply.</p>
     </div>
-    <button type="submit" onclick="handleCheckin(event)">Submit</button>
+    <button type="submit">Submit</button>
+    </form>
+    <br>
+    <div>
+    <img src="images/sdcs_logo.png" alt="sdcs_logo" id='logo'>
+    </div>
     </div>
 <script src="main.js"></script>
 </body>
