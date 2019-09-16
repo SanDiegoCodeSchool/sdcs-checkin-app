@@ -1,17 +1,14 @@
 function handleCheckin(e) {
-  console.log('Form was submitted.');
-  // e.preventDefault();
-  const url = '/jscheckin';
-  const data = {
+  const attendeeInfo = {
     email: document.getElementById('email').value,
     firstName: document.getElementById('first-name').value,
     lastName: document.getElementById('last-name').value,
     phoneNumber: document.getElementById('phone-number').value,
   };
-  console.log(`about to send ${JSON.stringify(data)}`);
-  fetch(url, {
+
+  fetch('/jscheckin', {
     method: 'POST',
-    body: JSON.stringify(data),
+    body: JSON.stringify(attendeeInfo),
     headers: {
       'Content-Type': 'application/json'
     }
