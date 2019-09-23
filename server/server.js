@@ -2,6 +2,7 @@
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+const mockEventData = require('./mock-data.json');
 
 var app = module.exports = loopback();
 
