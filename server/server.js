@@ -1,33 +1,29 @@
-const express = require('express');
-const morgan = require('morgan');
-const bodyParser = require("body-parser");
+'use strict';
 
-const app = express();
+var loopback = require('loopback');
+var boot = require('loopback-boot');
 
-const checkedIn = [];
+var app = module.exports = loopback();
 
-app.use(bodyParser.json());
-app.use(morgan("dev"));
-app.use(express.static('public'));
+app.start = function() {
+  // start the web server
+  return app.listen(function() {
+    app.emit('started');
+    var baseUrl = app.get('url').replace(/\/$/, '');
+    console.log('Web server listening at: %s', baseUrl);
+    if (app.get('loopback-component-explorer')) {
+      var explorerPath = app.get('loopback-component-explorer').mountPath;
+      console.log('Browse your REST API at %s%s', baseUrl, explorerPath);
+    }
+  });
+};
 
-app.get("/attendees", (req, res) => {
-  res.status(200).send(checkedIn);
-})
+// Bootstrap the application, configure models, datasources and middleware.
+// Sub-apps like REST API are mounted via boot scripts.
+boot(app, __dirname, function(err) {
+  if (err) throw err;
 
-app.post("/jscheckin", (req, res) => {
-  const attendee = {
-    email: req.body.email,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    phoneNumber: req.body.phoneNumber,
-    location: "",
-  }
-  checkedIn.push(attendee);
-  res.status(200).send(req.body);
+  // start the server if `$ node server.js`
+  if (require.main === module)
+    app.start();
 });
-
-app.get("*", function (req, res) {
-  res.status(404).send("error: page not found");
-});
-
-module.exports = app;

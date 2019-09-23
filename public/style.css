@@ -94,4 +94,6 @@ input:focus {
     height: 50px;
     padding: 22px 22px 0px 22px;
 }
-
+.success{
+    font-family: sans-serif;
+}
