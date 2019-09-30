@@ -1,0 +1,8 @@
+{"name" : "SDCS Checkin",
+    "short_name" : "Checkin App",
+    "description" : "San Diego Code School application created to checkin to Meetup events/",
+    "display" : "standalone",
+    "orientation" : "natural",
+    "lang" : "English",
+    "icons" : [
+    ]}
