@@ -101,7 +101,7 @@ input:focus {
   padding-top: 20%
 }
 
-.event_dropdown {
+#event_dropdown {
     display: inline-block;
     margin-bottom: 10px;
     padding: 10px 0px ;
@@ -118,7 +118,7 @@ input:focus {
     height: 40px;
 }
 
-.event_dropdown:focus {
+#event_dropdown:focus {
     outline:none;
     border-color:rgb(224, 251, 80);
 }

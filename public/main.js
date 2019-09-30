@@ -1,12 +1,13 @@
 function handleCheckin(e) {
   const attendeeInfo = {
     email: document.getElementById('email').value,
-    firstName: document.getElementById('first-name').value,
-    lastName: document.getElementById('last-name').value,
-    phoneNumber: document.getElementById('phone-number').value,
+    first_name: document.getElementById('first-name').value,
+    last_name: document.getElementById('last-name').value,
+    phone_number: document.getElementById('phone-number').value,
+    event: document.getElementById('event_dropdown').value
   };
 
-  fetch('/jscheckin', {
+  fetch('/api/Attendees', {
     method: 'POST',
     body: JSON.stringify(attendeeInfo),
     headers: {
@@ -18,6 +19,4 @@ function handleCheckin(e) {
     .catch(error => {
       console.error('Error:', error);
     });
-
 }
-
