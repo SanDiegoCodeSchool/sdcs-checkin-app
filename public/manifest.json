@@ -5,5 +5,5 @@
   "background_color": "white",
   "display": "standalone",
   "scope": "/",
-  "start_url": "https://8e11711f.ngrok.io"
+  "start_url": "https://sdjs-checkin-pwa.herokuapp.com/"
 }
