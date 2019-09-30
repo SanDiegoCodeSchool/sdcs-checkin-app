@@ -7,8 +7,10 @@
 "email":{"type":"string","required":true},
 "phone_num":{"type":"number"},
 "location":{"type":"object"},
-"event":{"type":"object","required":true}},
+"event":{"type":"object"},
 "validations":[],
 "relations":{},
-"acls":[],"methods":{}
-}
+"acls":[],
+"methods":{}
+}}
+
