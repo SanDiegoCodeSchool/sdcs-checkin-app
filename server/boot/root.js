@@ -3,6 +3,7 @@
 const mockEventData = require('../mock-data.json');
 
 module.exports = function(server) {
+
   var router = server.loopback.Router();
 
   server.get('/events', (req, res) => {
