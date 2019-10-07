@@ -122,3 +122,35 @@ input:focus {
     outline:none;
     border-color:rgb(224, 251, 80);
 }
+
+.grid-item {
+    padding: 20px;
+    text-align: center;
+}
+
+table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+}
+  
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td {
+    padding: 15px;
+}
+
+.at-container {
+    margin: 10px auto 0 auto;
+    padding:10px;
+    background: white;
+    text-align: center;
+    min-height: 150px;
+}
+
+#at-header {
+    text-align: center;
+    font-size: 50px;
+}
