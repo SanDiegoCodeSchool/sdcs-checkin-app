@@ -1,22 +1,40 @@
-function createView(attendees){
-    const table = document.createElement('table');
-    const tableHead = document.createElement('thead');
-    const tableBody = document.createElement('tbody');
+function createView(attendees) {
     let tr, td;
+    let tableBody = document.getElementById('table-body');
+
     attendees.map(attendee => {
         tr = document.createElement('tr');
         td = document.createElement('td');
-        td.appendChild(document.createTextNode(`${attendee.event} ${attendee.first_name} ${attendee.last_name} ${attendee.email} ${attendee.phone_number}  `));
+
+        td.appendChild(document.createTextNode(`${attendee.first_name}`));
         tr.appendChild(td);
-        tableBody.appendChild(tr);
+
+        td = document.createElement('td');
+
+        td.appendChild(document.createTextNode(`${attendee.last_name}`));
+        tr.appendChild(td);
+
+        td = document.createElement('td');
+
+        td.appendChild(document.createTextNode(`${attendee.email}`));
+        tr.appendChild(td);
+
+        td = document.createElement('td');
+
+        td.appendChild(document.createTextNode(`${attendee.phone_number}`));
+        tr.appendChild(td);
+
+        td = document.createElement('td');
+
+        td.appendChild(document.createTextNode(`${attendee.event.title}`));
+        tr.appendChild(td);
+
+        tableBody.appendChild(td);
     });
-console.log(attendees)
-    table.appendChild(tableBody)
-    document.body.appendChild(table);  
 }
 
 fetch('/api/attendees')
-    .then(response => response.json())
-    .then(result=> (createView(result))
-    
-    )
+  .then(response => response.json())
+  .then(result => (createView(result))
+  )
+  .catch(error => console.log(error));

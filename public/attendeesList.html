@@ -8,21 +8,19 @@
     <link rel="stylesheet" href="./tableStyle.css" type="text/css" />
 
 </head>
-
-   <h1> Attendees List </h1> 
-        <table class="container">
-            <th>
-                <tr class="row">
-                    <td class="th">Event:</td>
-                    <td class="th">First Name:</td>
-                    <td class="th">Last Name:</td>
-                    <td class="th">email:</td>
-                    <td class="th">Phone number:</td>
-                </tr>
-            </th>
-        </table>
-    
 <body>
+    <h1 id='at-header'>Attendee Info</h1>
+        <table id="attendee-info" class="at-container">
+            <thead >
+                <th>Email</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone Number</th>
+                <th>Event</th>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
     <script src="listHandler.js"></script>
 </body>
 
