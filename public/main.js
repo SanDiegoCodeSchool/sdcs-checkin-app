@@ -16,10 +16,10 @@ function handleCheckin(e) {
     body: JSON.stringify(attendeeInfo),
     headers: {
       'Content-Type': 'application/json'
-    }
+    },
   })
     .then(res => res.json())
-    .then(res => window.location.replace("confirmation.html"))
+    .then(res => window.location.replace('confirmation.html'))
     .catch(error => {
       console.error('Error:', error);
     });
