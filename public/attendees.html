@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Attendee Info</title>
     <link rel="stylesheet" href="./style.css" type="text/css" />
-    <title>Attendees</title>
-  </head>
-  <body>
-    <div class="container">
-      <div id="confirmationMessage">
-        <img src="./images/sdjs_logo.png" width="200px" />
-        <div>
-          <select id="event_dropdown" onchange=eventChange()>
-            <option value="">Select your event</option>
-            <option value="1">San Diego Tech Coffee</option>
-            <option value="2">Blockchain & Brews</option>
-            <option value="3">Robot Framework San Diego</option>
-          </select>
-        </div>
-        <h2 class="attendants">Attendees checked in:</h2>
-        <div id="people-div">
-          <p id="people">0</p>
-        </div>
-      </div>
+</head>
+
+<body>
+    <h1 id='at-header'>Attendee Info</h1>
+    <div >
+        <table id="attendee-info" class="at-container">
+            <thead >
+                <th>Email</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone Number</th>
+                <th>Event</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>bob.mcgee@email.com</td>
+                <td>Bob</td>
+                <td>McGee</td>
+                <td>858-750-6598</td>
+                <td>San Diego Tech Coffee</td>
+            </tr>
+            <tr>
+                <td>robert.moore@email.com</td>
+                <td>Robert</td>
+                <td>Moore</td>
+                <td>858-394-9024</td>
+                <td>San Diego Tech Coffee</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <script src="main.js"></script>
-  </body>
+</body>
+
 </html>
