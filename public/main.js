@@ -24,3 +24,16 @@ function handleCheckin(e) {
       console.error('Error:', error);
     });
 }
+
+function handlePhoneNumber() {
+  console.log(document.getElementById('area-code').value.length)
+  if(document.getElementById('area-code').value.length == 3){
+    document.getElementById('phone-one').focus();
+  }
+  if(document.getElementById('phone-one').value.length == 3){
+    document.getElementById('phone-two').focus();
+  }
+  if(document.getElementById('phone-two').value.length == 4){
+    document.getElementById('submit-button').focus();
+  }
+}
