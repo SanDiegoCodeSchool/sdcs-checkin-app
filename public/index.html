@@ -43,7 +43,13 @@
 
             <div class="field">
                 <label for="phone-number">Phone Number</label>
-                 <input id="phone-number" type='tel' pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="(000) 000-0000" />
+                <div id="phone-number">
+                    <input id="area-code" oninput="handlePhoneNumber()"/>
+                    <input id="phone-one" oninput="handlePhoneNumber()"/>
+                    <p class="dash"><strong>    -    </strong></p>
+                    <input id="phone-two" oninput="handlePhoneNumber()"/>
+                </div> 
+                <!-- <input id="ç" type='tel' pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="(000) 000-0000" /> -->
             </div>
 
             <div>
@@ -53,7 +59,7 @@
                 </p>
             </div>
 
-            <button type="submit">Submit</button>
+            <button id="submit-button" type="submit">Submit</button>
         </form>
     </div>
     <div class="image-wrapper">

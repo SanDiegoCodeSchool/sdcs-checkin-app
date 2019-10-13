@@ -182,3 +182,48 @@ th, td {
     text-align: center;
     font-size: 50px;
 }
+
+#area-code {
+  width: 9%;
+  margin-top: 0;
+  margin-right: 0;
+  border-right: 0px;
+  box-shadow: none;
+  border-radius: 4px 0px 0px 4px;
+}
+
+#phone-one {
+  width: 9%;
+  margin-top: 0;
+  margin-left: 0px;
+  padding-left: 3px;
+  margin-right: 0;
+  border-radius: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  box-shadow: none;
+}
+
+#phone-two {
+  width: 12%;
+  margin-top: 0;
+  margin-left: 0;
+  border-left: 0px;
+  box-shadow: none;
+  border-radius: 0px 4px 4px 0px;
+}
+
+#phone-number {
+  display: flex;
+  flex-flow: row;
+}
+
+.dash {
+  margin-top: 0;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-top: 3px solid #1884c3;
+  border-bottom: 3px solid #1884c3;
+  padding-top: 10px;
+  padding-bottom: 9px;
+}
