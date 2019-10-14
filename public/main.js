@@ -26,12 +26,10 @@ function handleCheckin(e) {
 }
 
 function formatPhoneNumber(phoneNumberString) {
-  var cleaned = ('' + phoneNumberString).replace(/\D/g, '')
-  var match = cleaned.match(/^\(?([2-9][0-8][0-9])\)?[-.●]?([2-9][0-9]{2})[-.●]?([0-9]{4})$/)
+  var cleaned = ('' + phoneNumberString).replace(/\D/g, '');
+  var match = cleaned.match(/^\(?([2-9][0-8][0-9])\)?[-.●]?([2-9][0-9]{2})[-.●]?([0-9]{4})$/);
   if (match) {
-    return '(' + match[1] + ') ' + match[2] + '-' + match[3]
+    return '(' + match[1] + ') ' + match[2] + '-' + match[3];
   }
-  return null
+  return null;
 }
-
-console.log(formatPhoneNumber(8585555555))
