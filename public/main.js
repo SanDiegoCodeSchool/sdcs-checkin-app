@@ -24,7 +24,6 @@ function handleCheckin(e) {
       console.error('Error:', error);
     });
 }
-<<<<<<< HEAD
 
 function formatPhoneNumber(phoneNumberString) {
   var cleaned = ('' + phoneNumberString).replace(/\D/g, '');
@@ -34,21 +33,20 @@ function formatPhoneNumber(phoneNumberString) {
   }
   return null;
 }
-=======
-let telEl = document.querySelector('#phone-number')
+
+let telEl = document.querySelector('#phone-number');
 
 telEl.addEventListener('keyup', (e) => {
   let val = e.target.value;
   e.target.value = val
     .replace(/\D/g, '')
-    .replace(/(\d{1,3})(\d{1,3})?(\d{1,4})?/g, function(txt, f, s, t) {
-      if (t) {
-        return `(${f}) ${s}-${t}`
-      } else if (s) {
-        return `(${f}) ${s}`
-      } else if (f) {
-        return `(${f})`
+    .replace(/(\d{1,3})(\d{1,3})?(\d{1,4})?/g, function(txt, firstSet, secondSet, thirdSet) {
+      if (thirdSet) {
+        return `(${firstSet}) ${secondSet}-${thirdSet}`;
+      } else if (secondSet) {
+        return `(${firstSet}) ${secondSet}`;
+      } else if (firstSet) {
+        return `(${firstSet})`;
       }
     });
-})
->>>>>>> update phone input
+});
