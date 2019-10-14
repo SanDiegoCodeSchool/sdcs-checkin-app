@@ -33,6 +33,19 @@ function createView(attendees) {
     });
 }
 
+function createList(attendees) {
+     let tr, td;
+     let tableBody = document.getElementById('table-body');
+     attendees.map(attendee => {
+         tr = document.createElement('tr');
+         td = document.createElement('td');
+         td.appendChild(document.createTextNode(`${attendee.id}`));
+         tr.appendChild(td);
+         td = document.createElement('td');
+         tableBody.appendChild(td);
+     })
+}
+
 fetch('/api/attendees')
   .then(response => response.json())
   .then(result => (createView(result))

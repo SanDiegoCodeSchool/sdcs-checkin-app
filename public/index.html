@@ -43,7 +43,7 @@
 
             <div class="field">
                 <label for="phone-number">Phone Number</label>
-                 <input oninput="formatPhoneNumber()" id="phone-number" type='tel' pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="(XXX) XXX-XXXX" />
+                 <input id="phone-number" type='tel'  placeholder="(000) 000-0000" maxlength="14"/>
             </div>
 
             <div>
@@ -65,6 +65,8 @@
     <script src="main.js"></script>
     <link rel="manifest" href="./manifest.json" />
     <script src="sw.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+
 </body>
 
 </html>
