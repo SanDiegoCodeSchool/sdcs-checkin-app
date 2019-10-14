@@ -1,4 +1,5 @@
 function handleCheckin(e) {
+  e.preventDefault();
   var eventId = document.getElementById('event_dropdown').value;
   const attendeeInfo = {
     email: document.getElementById('email').value,
