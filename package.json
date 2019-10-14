@@ -1,14 +1,13 @@
 {
-  "name": "sdcs-checkin-app",
-  "version": "1.0.0",
+  "name": "sdjs-checkin-app",
+  "version": "0.9.0",
   "main": "server/server.js",
   "engines": {
-    "node": ">=6"
+    "node": ">=10"
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "node .",
-    "posttest": "npm run lint"
+    "start": "node ."
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -26,9 +25,9 @@
     "eslint-config-loopback": "^8.0.0"
   },
   "repository": {
-    "type": "",
+    "type": "git",
     "url": ""
   },
-  "license": "UNLICENSED",
-  "description": "sdcs-checkin-app"
+  "license": "MIT",
+  "description": "sdjs-checkin-app"
 }
