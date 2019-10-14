@@ -33,3 +33,20 @@ function formatPhoneNumber(phoneNumberString) {
   }
   return null;
 }
+
+let telEl = document.querySelector('#phone-number');
+
+telEl.addEventListener('keyup', (e) => {
+  let val = e.target.value;
+  e.target.value = val
+    .replace(/\D/g, '')
+    .replace(/(\d{1,3})(\d{1,3})?(\d{1,4})?/g, function(txt, firstSet, secondSet, thirdSet) {
+      if (thirdSet) {
+        return `(${firstSet}) ${secondSet}-${thirdSet}`;
+      } else if (secondSet) {
+        return `(${firstSet}) ${secondSet}`;
+      } else if (firstSet) {
+        return `(${firstSet})`;
+      }
+    });
+});
